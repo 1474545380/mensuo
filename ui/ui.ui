@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>510</width>
+    <height>708</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>门禁系统</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true">border-image:url(./data/background.jpg)</string>
+   </property>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <layout class="QGridLayout" name="gridLayout_1" rowstretch="1,4,8,4">
+      <item row="0" column="0">
+       <layout class="QVBoxLayout" name="verticalLayout_1">
+        <item>
+         <spacer name="verticalSpacer">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </item>
+      <item row="3" column="0">
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QLabel" name="result">
+          <property name="font">
+           <font>
+            <pointsize>40</pointsize>
+           </font>
+          </property>
+          <property name="autoFillBackground">
+           <bool>false</bool>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: red;border-image:url()</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="label">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>60</width>
+          <height>80</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>1280</width>
+          <height>960</height>
+         </size>
+        </property>
+        <property name="sizeIncrement">
+         <size>
+          <width>0</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="layoutDirection">
+         <enum>Qt::LeftToRight</enum>
+        </property>
+        <property name="autoFillBackground">
+         <bool>false</bool>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border-image:url()</string>
+        </property>
+        <property name="text">
+         <string>未启动</string>
+        </property>
+        <property name="scaledContents">
+         <bool>true</bool>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <item>
+         <widget class="QLCDNumber" name="lcdNumber">
+          <property name="font">
+           <font>
+            <pointsize>8</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">border-image:url();color: yellow;border:none;</string>
+          </property>
+          <property name="digitCount">
+           <number>20</number>
+          </property>
+          <property name="segmentStyle">
+           <enum>QLCDNumber::Flat</enum>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>510</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="Setup">
+    <property name="title">
+     <string>设置</string>
+    </property>
+    <addaction name="Open_cam"/>
+    <addaction name="Open_face_regionizer"/>
+    <addaction name="Face_data_get"/>
+    <addaction name="Train_face_data"/>
+    <addaction name="Select_model_file"/>
+   </widget>
+   <widget class="QMenu" name="Manage">
+    <property name="title">
+     <string>管理</string>
+    </property>
+    <addaction name="Login"/>
+    <addaction name="Register"/>
+    <addaction name="Signout"/>
+    <addaction name="AutoRun"/>
+    <addaction name="CloseWindow"/>
+   </widget>
+   <addaction name="Manage"/>
+   <addaction name="Setup"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="Open_cam">
+   <property name="text">
+    <string>开启摄像头</string>
+   </property>
+  </action>
+  <action name="Open_face_regionizer">
+   <property name="text">
+    <string>启动人脸识别</string>
+   </property>
+  </action>
+  <action name="Face_data_get">
+   <property name="text">
+    <string>录入人脸数据</string>
+   </property>
+  </action>
+  <action name="Train_face_data">
+   <property name="text">
+    <string>训练人脸模型</string>
+   </property>
+  </action>
+  <action name="Login">
+   <property name="text">
+    <string>登录</string>
+   </property>
+  </action>
+  <action name="Register">
+   <property name="text">
+    <string>注册</string>
+   </property>
+  </action>
+  <action name="Signout">
+   <property name="text">
+    <string>注销</string>
+   </property>
+  </action>
+  <action name="CloseWindow">
+   <property name="text">
+    <string>退出程序</string>
+   </property>
+  </action>
+  <action name="AutoRun">
+   <property name="text">
+    <string>自动运行</string>
+   </property>
+  </action>
+  <action name="Select_model_file">
+   <property name="text">
+    <string>选择模型文件</string>
+   </property>
+   <property name="visible">
+    <bool>false</bool>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
